@@ -1,7 +1,7 @@
 {
     "version": 2,
     "alias": "danandrosywedding.com",
-    "name": "wedding-site",
+    "name": "wedding",
     "builds": [
       {
         "src": "www/package.json",
@@ -19,41 +19,41 @@
     },
     "routes": [
       {
-        "src": "www/static/(.*)",
+        "src": "/static/(.*)",
         "headers": {
           "cache-control": "s-maxage=31536000,immutable"
         },
-        "dest": "www/static/$1"
+        "dest": "/static/$1"
       },
       {
-        "src": "www/favicon.ico",
+        "src": "/favicon.ico",
         "dest": "/favicon.ico"
       },
       {
-        "src": "www/images/0.jpg",
+        "src": "/images/0.jpg",
         "dest": "www/images/0.jpg"
       },
       {
-        "src": "www/asset-manifest.json",
+        "src": "/asset-manifest.json",
         "dest": "www/asset-manifest.json"
       },
       {
-        "src": "www/manifest.json",
+        "src": "/manifest.json",
         "dest": "www/manifest.json"
       },
       {
-        "src": "www/precache-manifest.(.*)",
+        "src": "/precache-manifest.(.*)",
         "dest": "www/precache-manifest.$1"
       },
       {
-        "src": "www/service-worker.js",
+        "src": "/service-worker.js",
         "headers": {
           "cache-control": "s-maxage=0"
         },
         "dest": "www/service-worker.js"
       },
       {
-        "src": "www/(.*)",
+        "src": "/(.*)",
         "headers": {
           "cache-control": "s-maxage=0"
         },
