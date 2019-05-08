@@ -1,0 +1,63 @@
+{
+    "version": 2,
+    "alias": "danandrosywedding.com",
+    "name": "wedding-site",
+    "builds": [
+      {
+        "src": "www/package.json",
+        "use": "@now/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      },
+      { "src": "www/src/images/*", "use": "@now/static" },
+      { "src": "api/**/*.js", "use": "@now/node" }
+    ],
+    "env": {
+      "API_URL": "@api_url",
+      "API_KEY": "@api_key"
+    },
+    "routes": [
+      {
+        "src": "www/static/(.*)",
+        "headers": {
+          "cache-control": "s-maxage=31536000,immutable"
+        },
+        "dest": "www/static/$1"
+      },
+      {
+        "src": "www/favicon.ico",
+        "dest": "/favicon.ico"
+      },
+      {
+        "src": "www/images/0.jpg",
+        "dest": "www/images/0.jpg"
+      },
+      {
+        "src": "www/asset-manifest.json",
+        "dest": "www/asset-manifest.json"
+      },
+      {
+        "src": "www/manifest.json",
+        "dest": "www/manifest.json"
+      },
+      {
+        "src": "www/precache-manifest.(.*)",
+        "dest": "www/precache-manifest.$1"
+      },
+      {
+        "src": "www/service-worker.js",
+        "headers": {
+          "cache-control": "s-maxage=0"
+        },
+        "dest": "www/service-worker.js"
+      },
+      {
+        "src": "www/(.*)",
+        "headers": {
+          "cache-control": "s-maxage=0"
+        },
+        "dest": "www/index.html"
+      }
+    ]
+  }

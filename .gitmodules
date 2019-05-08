@@ -1,0 +1,6 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/danvanhorn/matrimony.io.git
+[submodule "www"]
+	path = www
+	url = https://github.com/danvanhorn/wedding-site.git
