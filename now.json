@@ -33,11 +33,11 @@
             "headers": {
                 "cache-control": "s-maxage=31536000,immutable"
             },
-            "dest": "/static/$1"
+            "dest": "/www/static/$1"
         },
         {
             "src": "/favicon.ico",
-            "dest": "/favicon.ico"
+            "dest": "www/favicon.ico"
         },
         {
             "src": "/images/0.jpg",
