@@ -20,7 +20,7 @@ export const Invitation = () =>
         <ParallaxBanner layers={[
                 {
                     image: './images/0.jpg',
-                    amount: 0.2
+                    amount: 0.3
                 }
             ]}
             >
@@ -28,6 +28,7 @@ export const Invitation = () =>
                 <Header as='h2' style={{color: "white"}}>You're Invited...</Header>
             </div>
         </ParallaxBanner>
-        <Header as='h4'>To the marriage of Daniel Van Horn and Rosanna Rocha.</Header>
-        <Image src='./images/tree.png' size='medium' wrapped />
+        <Header as='h4'>To the marriage of Daniel Van Horn and Rosanna Rocha</Header>
+        <Header as='h4'>August 31, 2019</Header>
+        {/* <Image src='./images/tree.png' size='medium' wrapped /> */}
     </Container>

@@ -81,7 +81,7 @@ export class RSVPModal extends React.Component {
     const { showModal, success, error } = this.state
     return (
     <Container textAlign="center">
-      <Modal open={showModal} onClose={this.closeModal} trigger={<Button onClick={() => this.setState({ showModal: true })} color='red' size="huge">RSVP Online</Button>}>
+      <Modal open={showModal} onClose={this.closeModal} closeIcon trigger={<Button onClick={() => this.setState({ showModal: true })} color='red' size="huge">RSVP Online</Button>}>
         <Modal.Header as='h2'>RSVP</Modal.Header>
         <Modal.Content>
           <Modal.Description>

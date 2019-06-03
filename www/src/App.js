@@ -10,23 +10,21 @@ import { Contact } from './components/Contact'
 
 const App = ({ mobile }) => (
   <ParallaxProvider>
-    <Container fluid>
-      <Invitation />
-    </Container>
+    <Invitation />
+    <Divider hidden/>
+    <Countdown/>
     <Container text>
       <Divider hidden/>
-      <Countdown/>
-      <Divider />
       <About />
-      <Divider />
-      <Location />
-      <Divider />
+      <Divider hidden/>
       <Registry />
-      <Divider />
+      <Divider hidden/>
+      <Location />
+      <Divider hidden/>
       <Contact />
       <Divider hidden/>
       <Container textAlign="center">
-        <p style={{ color: 'grey' }}>Copyright &copy; 2019 Dan Van Horn</p>
+        <p style={{ color: 'grey', fontSize: '11px' }}>Copyright &copy; 2019 Dan Van Horn</p>
       </Container>
     </Container>     
   </ParallaxProvider>
