@@ -1,0 +1,46 @@
+{
+  "name": "wedding-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^5.0.2",
+    "axios": "^0.18.0",
+    "countdown": "^2.6.0",
+    "craco-less": "^1.7.0",
+    "moment": "^2.24.0",
+    "moment-countdown": "0.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "semantic-ui-react": "^0.86.0",
+    "validator": "^10.11.0"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "now-dev": "BROWSER=none craco start",
+    "now-build": "craco build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cpy-cli": "^2.0.0",
+    "dotenv": "^8.0.0",
+    "semantic-ui-less": "^2.4.1"
+  }
+}

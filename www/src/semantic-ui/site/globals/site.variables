@@ -1,0 +1,40 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@primaryColor: #002f4e;
+@pageBackground: @white;
+
+@headerFont        : 'Aurella', 'Mr De Haviland', cursive;
+
+@pageFont          : 'Abel', sans-serif;
+
+@googleFontName    : 'Mr+De+Haviland|Abel';
+@importGoogleFonts : true;
+@googleFontSizes   : '400,700';
+@googleSubset      : 'latin';
+
+@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
+
+@headerFontWeight : @normal;
+@headerLineHeight : unit((20 / 14), em);
+
+@h1 : unit((64 / 14), rem);
+@h2 : unit((58 / 14), rem);
+@h3 : unit((52 / 14), rem);
+@h4 : unit((48 / 14), rem);
+@h5 : unit((42 / 14), rem);
+
+@green : #228b22; 
+
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+@emSize   : 14px;
+
+/* The size of page text  */
+@fontSize : 20px;
+
