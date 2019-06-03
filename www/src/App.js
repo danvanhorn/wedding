@@ -28,7 +28,7 @@ const App = ({ mobile }) => (
       <Container textAlign="center">
         <p style={{ color: 'grey' }}>Copyright &copy; 2019 Dan Van Horn</p>
       </Container>
-    </Container>    
+    </Container>     
   </ParallaxProvider>
 )
 
