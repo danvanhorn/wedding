@@ -76,7 +76,7 @@
 /* Header */
 @headerMargin: '';
 @headerFontWeight: @normal;
-@headerFontSize: 2em;
+@headerFontSize: 1.5em;
 @headerLineHeightOffset: -(@lineHeight - 1em) / 2;
 @headerColor: @darkTextColor;
 

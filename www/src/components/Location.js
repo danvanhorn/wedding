@@ -12,7 +12,7 @@ export const Location = () =>
                 />
                 <Card.Content>
                     <Card.Header as='h4'>The Ceremony</Card.Header>
-                    <Card.Meta textAlign="left">August 31, 2019 / Time<br />17120 NE Fairview Dr.<br /> Dundee OR 97115</Card.Meta>
+                    <Card.Meta textAlign="left">August 31, 2019 / Time<br />407 Ferry St.<br />Dayton, OR 97114</Card.Meta>
                 </Card.Content>
             </Card>
             <Card centered>
@@ -22,7 +22,7 @@ export const Location = () =>
                 />
                 <Card.Content>
                     <Card.Header as='h4'>The Reception</Card.Header>
-                    <Card.Meta textAlign="left">August 31, 2019 / Time<br />17120 NE Fairview Dr.<br /> Dundee OR 97115</Card.Meta>
+                    <Card.Meta textAlign="left">August 31, 2019 / Time<br />13225 SE Finn Ln.<br />Dayton, OR 97114</Card.Meta>
                 </Card.Content>
             </Card>
         </Card.Group>

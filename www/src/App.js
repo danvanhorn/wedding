@@ -1,4 +1,5 @@
 import React from 'react'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { Container, Divider } from 'semantic-ui-react'
 import { Countdown } from './components/Countdown'
 import { Invitation } from './components/Invitation'
@@ -8,9 +9,11 @@ import { Registry } from './components/Registry'
 import { Contact } from './components/Contact'
 
 const App = ({ mobile }) => (
-    <Container text>
-      <Divider hidden/>
+  <ParallaxProvider>
+    <Container fluid>
       <Invitation />
+    </Container>
+    <Container text>
       <Divider hidden/>
       <Countdown/>
       <Divider />
@@ -25,7 +28,8 @@ const App = ({ mobile }) => (
       <Container textAlign="center">
         <p style={{ color: 'grey' }}>Copyright &copy; 2019 Dan Van Horn</p>
       </Container>
-    </Container>  
+    </Container>    
+  </ParallaxProvider>
 )
 
 export default App
