@@ -1,4 +1,5 @@
 import React from 'react'
+import 'whatwg-fetch'
 import validator from 'validator'
 import { Container, Button, Modal, Form, Checkbox, Message } from 'semantic-ui-react'
 
