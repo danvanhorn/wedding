@@ -4,16 +4,12 @@
     "name": "wedding",
     "builds": [
         {
-            "src": "api/**/*.js",
+            "src": "/api/**/*.js",
             "use": "@now/node"
         },
         {
-            "src": "www/src/images/*",
-            "use": "@now/static"
-        },
-        {
-            "src": "www/package.json",
-            "use": "@now/static-build@0.5.6",
+            "src": "/www/package.json",
+            "use": "@now/static-build",
             "config": {
                 "distDir": "build"
             }
@@ -25,8 +21,8 @@
     },
     "routes": [
         {
-            "src": "/api/rsvp/(.*)",
-            "dest": "/api/rsvp/$1"
+            "src": "/api/rsvp",
+            "dest": "/api/rsvp/index.js"
         },
         {
             "src": "/static/(.*)",
@@ -40,27 +36,27 @@
             "dest": "www/favicon.ico"
         },
         {
-            "src": "/images/0.jpg",
-            "dest": "www/images/0.jpg"
+            "src": "/images/(.*)",
+            "dest": "/www/images/$1"
         },
         {
             "src": "/asset-manifest.json",
-            "dest": "www/asset-manifest.json"
+            "dest": "/www/asset-manifest.json"
         },
         {
             "src": "/manifest.json",
-            "dest": "www/manifest.json"
+            "dest": "/www/manifest.json"
         },
         {
             "src": "/precache-manifest.(.*)",
-            "dest": "www/precache-manifest.$1"
+            "dest": "/www/precache-manifest.$1"
         },
         {
             "src": "/service-worker.js",
             "headers": {
                 "cache-control": "s-maxage=0"
             },
-            "dest": "www/service-worker.js"
+            "dest": "/www/service-worker.js"
         },
         {
             "src": "/(.*)",
