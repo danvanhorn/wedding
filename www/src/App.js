@@ -19,7 +19,7 @@ const App = ({ mobile }) => (
     </Container>
     <Divider hidden/>
     <Registry />
-    <Container>
+    <Container text>
       <Divider hidden/>
       <Location />
       <Divider hidden/>
