@@ -9,7 +9,7 @@ const parallaxChildren = {
     right: 0,
     bottom: 0,
     display: "flex",
-    flexFlow: "column wrap",
+    flexFlow: "column nowrap",
     alignItems: "center",
     justifyContent: "center"
   }
@@ -22,7 +22,7 @@ export const Registry = () =>
                 amount: 0.3
             }
         ]}
-        >
+        style={{minHeight: "300px"}}>
           <div style={parallaxChildren}>
             <Header as="h4">Registry</Header>
             <Icon.Group>
