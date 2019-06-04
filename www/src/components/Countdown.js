@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
 import moment from 'moment'
 import countdown from 'countdown'
-import { RSVPModal } from './RSVPModal'
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 require('moment-countdown')
@@ -24,12 +23,11 @@ export const Countdown = () =>
     <ParallaxBanner layers={[
             {
                 image: './images/1.jpg',
-                amount: -0.4
+                amount: -0.3
             }
         ]}
         >
           <div style={parallaxChildren}>
-            <RSVPModal />
             <Header as="h5" style={{color: "white"}}>
               {`${moment().countdown('2019-8-31', countdown.MONTHS|countdown.DAYS).toString()} until the wedding`}
             </Header>

@@ -7,7 +7,7 @@ export const Location = () =>
         <Card.Group centered>
             <Card centered>
                 <Embed
-                    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5684.59148523422!2d-123.28276557476512!3d44.57051716640207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c040a2486ddeb5%3A0x7de6e84d62a7217b!2sTyler+Townhomes!5e0!3m2!1sen!2sus!4v1557079360716!5m2!1sen!2sus"
+                    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2810.3629033178686!2d-123.07942478494243!3d45.220226179098916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495442d52fe0a39%3A0xc24603440629e6c9!2s407+Ferry+St%2C+Dayton%2C+OR+97114!5e0!3m2!1sen!2sus!4v1559623127669!5m2!1sen!2sus"
                     defaultActive
                 />
                 <Card.Content>
@@ -17,7 +17,7 @@ export const Location = () =>
             </Card>
             <Card centered>
                 <Embed
-                    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.923589945555!2d-123.06488768377042!3d45.289765753085554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549540c2f9723503%3A0x662d1f1541be1ceb!2s17120+NE+Fairview+Dr%2C+Dundee%2C+OR+97115!5e0!3m2!1sen!2sus!4v1557286110594!5m2!1sen!2sus"
+                    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2815.3456032306963!2d-123.10486468494662!3d45.119331979098455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549551c9a2604a13%3A0xa07407b54cc598c!2s13225+SE+Finn+Ln%2C+Dayton%2C+OR+97114!5e0!3m2!1sen!2sus!4v1559623251106!5m2!1sen!2sus"
                     defaultActive
                 />
                 <Card.Content>

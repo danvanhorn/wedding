@@ -14,7 +14,8 @@ export class RSVPModal extends React.Component {
       plusOne: false,
       showModal: false,
       success: false,
-      error: false
+      error: false,
+      loading: false
     }
 
     this.submitRSVP = this.submitRSVP.bind(this)
@@ -42,6 +43,7 @@ export class RSVPModal extends React.Component {
     console.log({firstName, lastName, email, plusOne})
     if(this.isValid()) {
       try {
+        this.setState({ loading: true })
         const response = await window.fetch(`${window.location.href}api/rsvp`, { 
           method: "POST",
           headers: {
@@ -58,9 +60,11 @@ export class RSVPModal extends React.Component {
           } else {
             this.setState({ success: true, error: false })
           }
-        }
+        } 
+        this.setState({ loading: false })
       } catch(err) {
         console.error(err)
+        this.setState({ loading: false })
       }
     }    
   }
@@ -78,7 +82,7 @@ export class RSVPModal extends React.Component {
   }
 
   render() {
-    const { showModal, success, error } = this.state
+    const { showModal, success, error, loading } = this.state
     return (
     <Container textAlign="center">
       <Modal open={showModal} onClose={this.closeModal} closeIcon trigger={<Button onClick={() => this.setState({ showModal: true })} color='red' size="huge">RSVP Online</Button>}>
@@ -103,7 +107,7 @@ export class RSVPModal extends React.Component {
               </Form.Field>
               <Message success header='Success' content="You've submitted your RSVP" />
               <Message error header='Sorry...' content="It looks like you've already submitted an RSVP" />
-              <Button type='submit' color='blue'>Submit</Button>
+              {loading ? <Button loading primary>Loading</Button> : <Button type='submit' color='blue'>Submit</Button>}
             </Form>
           </Modal.Description>
         </Modal.Content>

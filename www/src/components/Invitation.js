@@ -1,6 +1,7 @@
 import React from 'react'
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { Container, Header, Image} from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
+import { RSVPModal } from './RSVPModal'
 
 
 const parallaxChildren = {
@@ -30,5 +31,6 @@ export const Invitation = () =>
         </ParallaxBanner>
         <Header as='h4'>To the marriage of Daniel Van Horn and Rosanna Rocha</Header>
         <Header as='h4'>August 31, 2019</Header>
+        <RSVPModal />
         {/* <Image src='./images/tree.png' size='medium' wrapped /> */}
     </Container>
