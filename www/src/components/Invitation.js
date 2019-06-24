@@ -20,8 +20,8 @@ export const Invitation = () =>
     <Container textAlign='center' fluid>
         <ParallaxBanner layers={[
                 {
-                    image: './images/0.jpg',
-                    amount: 0.3
+                    image: './images/Rosy-Dan-9-web.jpg',
+                    amount: -0.9
                 }
             ]}
             >

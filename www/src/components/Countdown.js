@@ -22,8 +22,8 @@ export const Countdown = () =>
   <Container textAlign="center" fluid>
     <ParallaxBanner layers={[
             {
-                image: './images/1.jpg',
-                amount: -0.3
+                image: './images/Rosy-Dan-3-web.jpg',
+                amount: 0.3
             }
         ]}
         >

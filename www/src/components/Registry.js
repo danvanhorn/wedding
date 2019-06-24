@@ -18,13 +18,13 @@ export const Registry = () =>
     <Container textAlign="center" fluid>
         <ParallaxBanner layers={[
             {
-                image: './images/3.jpg',
+                image: './images/Rosy-Dan-1-web.jpg',
                 amount: 0.3
             }
         ]}
         style={{minHeight: "300px"}}>
           <div style={parallaxChildren}>
-            <Header as="h4">Registry</Header>
+            <Header as="h4" style={{color: "white"}}>Registry</Header>
             <Icon.Group>
                 <a href="https://www.amazon.com/wedding/organize-registry?ref_=wedding_subnav">
                     <Icon link name="amazon" color="yellow" size="massive"></Icon>

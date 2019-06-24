@@ -1,5 +1,5 @@
 import React from 'react'
-import { ParallaxProvider } from 'react-scroll-parallax'
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import { Container, Divider } from 'semantic-ui-react'
 import { Countdown } from './components/Countdown'
 import { Invitation } from './components/Invitation'
@@ -22,13 +22,33 @@ const App = ({ mobile }) => (
     <Container text>
       <Divider hidden/>
       <Location />
+    </Container>
+    <Container fluid>
+      <Divider hidden/>
+      <ParallaxBanner layers={[
+            {
+                image: './images/Rosy-Dan-11-web.jpg',
+                amount: 0.5
+            }
+        ]}
+        >
+      </ParallaxBanner>
       <Divider hidden/>
       <Contact />
       <Divider hidden/>
-      <Container textAlign="center">
-        <p style={{ color: 'grey', fontSize: '11px' }}>Copyright &copy; 2019 Dan Van Horn</p>
-      </Container>
-    </Container>     
+    </Container>  
+    <Container textAlign="center" fluid>
+      <Divider hidden/>
+        <ParallaxBanner layers={[
+              {
+                  image: './images/Rosy-Dan-5-web.jpg',
+                  amount: 0.4
+              }
+          ]}
+          >
+        </ParallaxBanner>
+        <p style={{ color: 'grey', fontSize: '12px' }}>Copyright &copy; 2019 Dan Van Horn | Photography by Maddie Maschger</p>
+      </Container>   
   </ParallaxProvider>
 )
 

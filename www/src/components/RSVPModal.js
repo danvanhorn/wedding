@@ -12,6 +12,7 @@ export class RSVPModal extends React.Component {
       lastName: '',
       email: '',
       plusOne: false,
+      attending: false,
       showModal: false,
       success: false,
       error: false,
@@ -24,13 +25,15 @@ export class RSVPModal extends React.Component {
   }
 
   isValid() {
-    const { firstName, lastName, email } = this.state 
+    const { firstName, lastName, attending, email } = this.state 
     if(!firstName) {
       return false
     } else if(!lastName) {
       return false;
     } else if(!validator.isEmail(email)) {
       // prompt for valid email
+      return false;
+    } else if (!attending) {
       return false;
     } else {
       return true
@@ -39,8 +42,8 @@ export class RSVPModal extends React.Component {
 
   async submitRSVP(event) {
     event.preventDefault();
-    const { firstName, lastName, email, plusOne } = this.state 
-    console.log({firstName, lastName, email, plusOne})
+    const { firstName, lastName, email, attending, plusOne } = this.state 
+    console.log({firstName, lastName, email, attending, plusOne})
     if(this.isValid()) {
       try {
         this.setState({ loading: true })
@@ -50,9 +53,8 @@ export class RSVPModal extends React.Component {
             "Content-Type": "application/json"
           },
           type: "application/json",
-          body: JSON.stringify({ firstName, lastName, email, plusOne })
+          body: JSON.stringify({ firstName, lastName, email, attending, plusOne })
         })
-        console.log("response ", response)
         if (response.status === 200){
           const data = await response.json()
           if(data.exists && data.exists === true) {
@@ -75,6 +77,7 @@ export class RSVPModal extends React.Component {
       lastName: '',
       email: '',
       plusOne: false,
+      attending: false,
       showModal: false,
       success: false,
       error: false
@@ -103,7 +106,10 @@ export class RSVPModal extends React.Component {
                 <input placeholder='Email' value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} />
               </Form.Field>
               <Form.Field>
-                <Checkbox label='Plus one?' onChange={(event) => this.setState({ plusOne: !this.state.plusOne })} />
+                <Checkbox label='Will you attend?' onChange={(event) => this.setState({ attending: !this.state.attending })} />
+              </Form.Field>
+              <Form.Field>
+                <Checkbox label='If your invitation specifies, will you be bringing a plus one?' onChange={(event) => this.setState({ plusOne: !this.state.plusOne })} />
               </Form.Field>
               <Message success header='Success' content="You've submitted your RSVP" />
               <Message error header='Sorry...' content="It looks like you've already submitted an RSVP" />
