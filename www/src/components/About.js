@@ -5,5 +5,5 @@ export const About = () =>
     <Container textAlign='left'>
         <Header as='h4' textAlign='center'>The Couple</Header>
         <Container className='' text>9 years ago, we began our journey together. Through long-distances and tough times, our relationship is stronger than ever! 
-        We couldn't be more excited everyone to share this special day with us.</Container>
+        We couldn't be more excited for everyone to share this special day with us.</Container>
     </Container>
