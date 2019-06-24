@@ -8,6 +8,16 @@ import { Location } from './components/Location'
 import { Registry } from './components/Registry'
 import { Contact } from './components/Contact'
 
+const parallaxChildren = {
+  position: "absolute",
+  left: 0,
+  bottom: 0,
+  display: "flex",
+  flexFlow: "row wrap",
+  alignItems: "center",
+  justifyContent: "center"
+}
+
 const App = ({ mobile }) => (
   <ParallaxProvider>
     <Invitation />
@@ -27,8 +37,8 @@ const App = ({ mobile }) => (
       <Divider hidden/>
       <ParallaxBanner layers={[
             {
-                image: './images/Rosy-Dan-11-web.jpg',
-                amount: 0.5
+                image: './images/Rosy-Dan-12-web.jpg',
+                amount: -0.7
             }
         ]}
         >
@@ -46,8 +56,10 @@ const App = ({ mobile }) => (
               }
           ]}
           >
+          <div style={parallaxChildren}>
+            <p style={{ color: 'white', fontSize: '11pt', zIndex: '1' }}>Copyright &copy; 2019 Dan Van Horn | Photography by Maddie Maschger &nbsp;</p>
+          </div>
         </ParallaxBanner>
-        <p style={{ color: 'grey', fontSize: '12px' }}>Copyright &copy; 2019 Dan Van Horn | Photography by Maddie Maschger</p>
       </Container>   
   </ParallaxProvider>
 )
