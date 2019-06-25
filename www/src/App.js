@@ -10,8 +10,9 @@ import { Contact } from './components/Contact'
 
 const parallaxChildren = {
   position: "absolute",
-  left: 0,
   bottom: 0,
+  right: 0,
+  left: 0,
   display: "flex",
   flexFlow: "row wrap",
   alignItems: "center",
