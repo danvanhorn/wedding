@@ -26,7 +26,7 @@ export const Registry = () =>
           <div style={parallaxChildren}>
             <Header as="h4" style={{color: "white"}}>Registry</Header>
             <Icon.Group>
-                <a href="https://www.amazon.com/wedding/organize-registry?ref_=wedding_subnav">
+                <a href="https://www.amazon.com/wedding/share/danandrosywedding">
                     <Icon link name="amazon" color="yellow" size="massive"></Icon>
                 </a>
                 <a href="http://www.target.com/gift-registry/gift/danandrosywedding">
