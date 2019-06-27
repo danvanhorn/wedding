@@ -10,9 +10,9 @@ export class RSVPModal extends React.Component {
     this.state = {
       firstName: '',
       lastName: '',
+      attending: '',
       email: '',
       plusOne: false,
-      attending: false,
       showModal: false,
       success: false,
       error: false,
@@ -25,14 +25,16 @@ export class RSVPModal extends React.Component {
   }
 
   isValid() {
-    const { firstName, lastName, email } = this.state 
+    const { firstName, lastName, attending, email } = this.state 
     if(!firstName) {
       return false
     } else if(!lastName) {
       return false;
     } else if(!validator.isEmail(email)) {
       // prompt for valid email
-      return false;
+      return false
+    } else if (attending === '') {
+      return false
     } else {
       return true
     }
@@ -72,9 +74,9 @@ export class RSVPModal extends React.Component {
     this.setState({ 
       firstName: '',
       lastName: '',
+      attending: '',
       email: '',
       plusOne: false,
-      attending: false,
       showModal: false,
       success: false,
       error: false
@@ -103,8 +105,8 @@ export class RSVPModal extends React.Component {
                 <input placeholder='Email' value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} />
               </Form.Field>
               <Form.Group inline>
-                <Form.Radio label='Gladly Attend!' checked={attending === true} onChange={(event) => this.setState({ attending: true })} />
-                <Form.Radio label='Regretfully Decline.' checked={attending === false} onChange={(event) => this.setState({ attending: false })} />
+                <Form.Radio label='Gladly Attend!' checked={attending === true} onChange={(event) => this.setState({ attending: 'yes' })} />
+                <Form.Radio label='Regretfully Decline.' checked={attending === false} onChange={(event) => this.setState({ attending: 'no' })} />
               </Form.Group>
               <Form.Field>
                 <Checkbox label='If your invitation specifies, will you be bringing a plus one?' onChange={(event) => this.setState({ plusOne: !this.state.plusOne })} />
