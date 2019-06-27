@@ -11,7 +11,6 @@ const base = Airtable.base('appDWgGZokOqEJx4q')
 
 module.exports = async (req, res) => {
     const { firstName, lastName, email, attending, plusOne } = await json(req)
-    console.log(firstName, lastName, email, attending, plusOne)
     let guests = [];
 
     base('rsvp-list').select({
