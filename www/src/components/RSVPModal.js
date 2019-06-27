@@ -105,8 +105,8 @@ export class RSVPModal extends React.Component {
                 <input placeholder='Email' value={this.state.email} onChange={(event) => this.setState({ email: event.target.value })} />
               </Form.Field>
               <Form.Group inline>
-                <Form.Radio label='Gladly Attend!' checked={attending === true} onChange={(event) => this.setState({ attending: 'yes' })} />
-                <Form.Radio label='Regretfully Decline.' checked={attending === false} onChange={(event) => this.setState({ attending: 'no' })} />
+                <Form.Radio label='Gladly Attend!' checked={attending === 'yes'} onChange={(event) => this.setState({ attending: 'yes' })} />
+                <Form.Radio label='Regretfully Decline.' checked={attending === 'no'} onChange={(event) => this.setState({ attending: 'no' })} />
               </Form.Group>
               <Form.Field>
                 <Checkbox label='If your invitation specifies, will you be bringing a plus one?' onChange={(event) => this.setState({ plusOne: !this.state.plusOne })} />
